@@ -1,3 +1,4 @@
+import 'package:campaign/pages/homePage.dart';
 import 'package:campaign/themes/constant.dart';
 import 'package:flutter/material.dart';
 
@@ -47,7 +48,11 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
             color: primary,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (_) {
+                return HomePage();
+              }));
+            },
             child: Container(
               alignment: Alignment.center,
               child: Text(
